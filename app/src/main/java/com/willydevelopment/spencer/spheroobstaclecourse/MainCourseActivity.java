@@ -45,11 +45,7 @@ public class MainCourseActivity extends Activity{
 
     private static final float ROBOT_VELOCITY = 0.4f;
     private int loopCount;
-    private int distance;
 
-
-    TextView connectTextBox;
-    TextView statusTextView;
     Button course1Button;
     Button course2Button;
     Button course3Button;
@@ -66,17 +62,6 @@ public class MainCourseActivity extends Activity{
         course3Button = (Button)findViewById(R.id.course3Button);
         course4Button = (Button)findViewById(R.id.course4Button);
         course5Button = (Button)findViewById(R.id.course5Button);
-
-
-
-
-        /*
-            Associate a listener for robot state changes with the DualStackDiscoveryAgent.
-            DualStackDiscoveryAgent checks for both Bluetooth Classic and Bluetooth LE.
-            DiscoveryAgentClassic checks only for Bluetooth Classic robots.
-            DiscoveryAgentLE checks only for Bluetooth LE robots.
-       */
-        //DualStackDiscoveryAgent.getInstance().addRobotStateListener(this);
 
     }
 
@@ -136,6 +121,8 @@ public class MainCourseActivity extends Activity{
     }
 
     public void course1Function(){
+        course1Button.setTextColor(Color.parseColor("#FFFFFF"));
+        ConnectingActivity.mRobot.setLed(1.0f, 0f, 1.0f);
         ConnectingActivity.mRobot.drive(0f, ROBOT_VELOCITY);
         try {
             Thread.sleep(1500);                 //1000 milliseconds is one second.
@@ -178,10 +165,13 @@ public class MainCourseActivity extends Activity{
         } catch(InterruptedException ex) {
             Thread.currentThread().interrupt();
         }
+        course1Button.setTextColor(Color.parseColor("#ff00ddff"));
         course2Function();
     }
 
     public void course2Function(){
+        course2Button.setTextColor(Color.parseColor("#FFFFFF"));
+        ConnectingActivity.mRobot.setLed(1.0f, 1.0f, 0f);
         ConnectingActivity.mRobot.drive(0f, ROBOT_VELOCITY);
         try {
             Thread.sleep(1000);                 //1000 milliseconds is one second.
@@ -248,10 +238,13 @@ public class MainCourseActivity extends Activity{
         } catch(InterruptedException ex) {
             Thread.currentThread().interrupt();
         }
+        course2Button.setTextColor(Color.parseColor("#ff00ddff"));
         course3Function();
     }
 
     public void course3Function() {
+        course3Button.setTextColor(Color.parseColor("#FFFFFF"));
+        ConnectingActivity.mRobot.setLed(0f, 0f, 1.0f);
         loopCount = 1;
         ConnectingActivity.mRobot.drive(90f, ROBOT_VELOCITY);
         try {
@@ -490,10 +483,13 @@ public class MainCourseActivity extends Activity{
         } catch(InterruptedException ex) {
             Thread.currentThread().interrupt();
         }
+        course3Button.setTextColor(Color.parseColor("#ff00ddff"));
         course4Function();
     }
 
     public void course4Function(){
+        course4Button.setTextColor(Color.parseColor("#FFFFFF"));
+        ConnectingActivity.mRobot.setLed(0.5f, 0.5f, 0.5f);
         ConnectingActivity.mRobot.drive(0f, ROBOT_VELOCITY);
         ConnectingActivity.mRobot.enableCollisions(true);
         ConnectingActivity.mRobot.addResponseListener(new ResponseListener() {
@@ -515,6 +511,7 @@ public class MainCourseActivity extends Activity{
                 }
             }
         });
+        course4Button.setTextColor(Color.parseColor("#ff00ddff"));
         course1Button.setEnabled(true);
         course2Button.setEnabled(true);
         course3Button.setEnabled(true);

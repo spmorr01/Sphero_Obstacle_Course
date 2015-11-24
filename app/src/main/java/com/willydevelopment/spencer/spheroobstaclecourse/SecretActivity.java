@@ -37,6 +37,7 @@ public class SecretActivity extends AppCompatActivity {
     }
 
     public void onGoButtonClicked(View v){
+        ConnectingActivity.mRobot.setLed(1.0f, 0.5f, 0.5f);
         int errorCount = 0;
         try {
             distance = Integer.parseInt(distanceEditText.getText().toString());
