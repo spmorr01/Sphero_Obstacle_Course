@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.willydevelopment.spencer.spheroobstaclecourse.MainCourseActivity"
+    android:gravity="center"
+    android:background="@mipmap/background_maincourse">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        tools:context=".HomeScreen"
+        android:id="@+id/CourseTable"
+        android:layout_centerInParent="true">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/course1Row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <Button
+                android:id="@+id/course1Button"
+                android:layout_width="125dp"
+                android:layout_height="75dp"
+                android:background="#07000000"
+                android:textSize="22sp"
+                android:text="Course 1"
+                android:textColor="@android:color/holo_blue_bright"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:onClick="onCourse1ButtonClicked">
+            </Button>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/course2Row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <Button
+                android:id="@+id/course2Button"
+                android:layout_width="125dp"
+                android:layout_height="75dp"
+                android:background="#07000000"
+                android:textSize="22sp"
+                android:text="Course 2"
+                android:textColor="@android:color/holo_blue_bright"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:onClick="onCourse2ButtonClicked">
+            </Button>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/course3Row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <Button
+                android:id="@+id/course3Button"
+                android:layout_width="125dp"
+                android:layout_height="75dp"
+                android:background="#07000000"
+                android:textSize="22sp"
+                android:text="Course 3"
+                android:textColor="@android:color/holo_blue_bright"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:onClick="onCourse3ButtonClicked">
+            </Button>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/course4Row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <Button
+                android:id="@+id/course4Button"
+                android:layout_width="125dp"
+                android:layout_height="75dp"
+                android:background="#07000000"
+                android:textSize="22sp"
+                android:text="Course 4"
+                android:textColor="@android:color/holo_blue_bright"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:onClick="onCourse4ButtonClicked">
+            </Button>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/course5Row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <Button
+                android:id="@+id/course5Button"
+                android:layout_width="125dp"
+                android:layout_height="75dp"
+                android:background="#07000000"
+                android:textSize="22sp"
+                android:text="Course 5"
+                android:textColor="@android:color/holo_blue_bright"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:onClick="onCourse5ButtonClicked">
+            </Button>
+        </LinearLayout>
+    </TableLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Super Secret Button"
+        android:id="@+id/secretButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onSecretButtonClicked"
+        android:background="#07000000"
+        android:textSize="12sp"
+        android:textColor="#c90fb8" />
+
+</RelativeLayout>
