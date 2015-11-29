@@ -67,6 +67,7 @@ public class MainCourseActivity extends Activity{
 
 
     public void onCourse1ButtonClicked (View v) {
+        course1Button.setTextColor((Color.parseColor("#FF0000")));
         course1Function();
         course1Button.setEnabled(false);
         course2Button.setEnabled(false);
@@ -104,7 +105,6 @@ public class MainCourseActivity extends Activity{
     }
 
     public void course1Function(){
-        course1Button.setTextColor(Color.parseColor("#FFFFFF"));
         ConnectingActivity.mRobot.setLed(1.0f, 0f, 1.0f);
         ConnectingActivity.mRobot.drive(0f, ROBOT_VELOCITY);
         try {

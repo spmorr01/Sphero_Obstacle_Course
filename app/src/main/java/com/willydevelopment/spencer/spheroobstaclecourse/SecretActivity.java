@@ -19,12 +19,9 @@ import com.orbotix.common.internal.DeviceResponse;
 
 public class SecretActivity extends AppCompatActivity {
 
-    private float USER_VELOCITY;
     TextView positionYTextView;
     EditText distanceEditText;
-    EditText velocityEditText;
     private int distance;
-    private int velocity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +30,7 @@ public class SecretActivity extends AppCompatActivity {
         setContentView(R.layout.activity_secret);
         positionYTextView = (TextView)findViewById(R.id.positionYTextView);
         distanceEditText = (EditText)findViewById(R.id.distanceEditText);
-        velocityEditText = (EditText)findViewById(R.id.velocityEditText);
+
     }
 
     public void onGoButtonClicked(View v){
@@ -57,46 +54,9 @@ public class SecretActivity extends AppCompatActivity {
                         }
                     });
         }
-        try {
-            velocity = Integer.parseInt(velocityEditText.getText().toString());
-            if (velocity < 0 && velocity > 100){
-                errorCount += 1;
-                AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
-                dlgAlert.setMessage("Please enter a valid percentage value.");
-                dlgAlert.setTitle("Error: Invalid Percent");
-                dlgAlert.setPositiveButton("OK", null);
-                dlgAlert.setCancelable(true);
-                dlgAlert.create().show();
 
-                dlgAlert.setPositiveButton("Ok",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-
-                            }
-                        });
-            }
-            else{
-                USER_VELOCITY = velocity / 100;
-            }
-
-        } catch (Exception e){
-            errorCount += 1;
-            AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
-            dlgAlert.setMessage("Please enter a valid numeric value.");
-            dlgAlert.setTitle("Error: Invalid Integer");
-            dlgAlert.setPositiveButton("OK", null);
-            dlgAlert.setCancelable(true);
-            dlgAlert.create().show();
-
-            dlgAlert.setPositiveButton("Ok",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-
-                        }
-                    });
-        }
         if (errorCount == 0){
-            ConnectingActivity.mRobot.drive(0f, USER_VELOCITY);
+            ConnectingActivity.mRobot.drive(0f, 0.6f);
             ConnectingActivity.mRobot.addResponseListener(new ResponseListener() {
                 @Override
                 public void handleResponse(DeviceResponse response, Robot robot) {

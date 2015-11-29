@@ -32,7 +32,7 @@
                 android:background="#07000000"
                 android:textSize="22sp"
                 android:text="Course 1"
-                android:textColor="@android:color/holo_blue_bright"
+                android:textColor="#ff00ddff"
                 android:clickable="true"
                 android:layout_gravity="center"
                 android:onClick="onCourse1ButtonClicked">
@@ -51,7 +51,7 @@
                 android:background="#07000000"
                 android:textSize="22sp"
                 android:text="Course 2"
-                android:textColor="@android:color/holo_blue_bright"
+                android:textColor="#ff00ddff"
                 android:clickable="true"
                 android:layout_gravity="center"
                 android:onClick="onCourse2ButtonClicked">
@@ -70,7 +70,7 @@
                 android:background="#07000000"
                 android:textSize="22sp"
                 android:text="Course 3"
-                android:textColor="@android:color/holo_blue_bright"
+                android:textColor="#ff00ddff"
                 android:clickable="true"
                 android:layout_gravity="center"
                 android:onClick="onCourse3ButtonClicked">
@@ -89,7 +89,7 @@
                 android:background="#07000000"
                 android:textSize="22sp"
                 android:text="Course 4"
-                android:textColor="@android:color/holo_blue_bright"
+                android:textColor="#ff00ddff"
                 android:clickable="true"
                 android:layout_gravity="center"
                 android:onClick="onCourse4ButtonClicked">
