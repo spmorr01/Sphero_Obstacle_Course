@@ -22,21 +22,6 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:id="@+id/loadingRow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center">
-            <ProgressBar
-                android:id="@+id/progressBar"
-                style="?android:attr/progressBarStyleLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
             android:id="@+id/headerTableRow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,7 +35,18 @@
                 android:textColor="#ffffff"
                 android:textSize="25dp" />
         </LinearLayout>
-
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/loadingRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
     </TableLayout>
 
 

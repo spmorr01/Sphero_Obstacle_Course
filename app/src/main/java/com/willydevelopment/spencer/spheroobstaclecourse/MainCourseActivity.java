@@ -50,7 +50,7 @@ public class MainCourseActivity extends Activity{
     Button course2Button;
     Button course3Button;
     Button course4Button;
-    Button course5Button;
+
 
 
     @Override
@@ -61,7 +61,6 @@ public class MainCourseActivity extends Activity{
         course2Button = (Button)findViewById(R.id.course2Button);
         course3Button = (Button)findViewById(R.id.course3Button);
         course4Button = (Button)findViewById(R.id.course4Button);
-        course5Button = (Button)findViewById(R.id.course5Button);
 
     }
 
@@ -73,7 +72,6 @@ public class MainCourseActivity extends Activity{
         course2Button.setEnabled(false);
         course3Button.setEnabled(false);
         course4Button.setEnabled(false);
-        course5Button.setEnabled(false);
     }
 
     public void onCourse2ButtonClicked(View v) {
@@ -82,7 +80,6 @@ public class MainCourseActivity extends Activity{
         course2Button.setEnabled(false);
         course3Button.setEnabled(false);
         course4Button.setEnabled(false);
-        course5Button.setEnabled(false);
     }
 
     public void onCourse3ButtonClicked(View v){
@@ -91,7 +88,6 @@ public class MainCourseActivity extends Activity{
         course2Button.setEnabled(false);
         course3Button.setEnabled(false);
         course4Button.setEnabled(false);
-        course5Button.setEnabled(false);
     }
 
     public void onCourse4ButtonClicked(View v){
@@ -100,24 +96,11 @@ public class MainCourseActivity extends Activity{
         course2Button.setEnabled(false);
         course3Button.setEnabled(false);
         course4Button.setEnabled(false);
-        course5Button.setEnabled(false);
     }
 
     public void onSecretButtonClicked(View v){
-        final Intent intent = new Intent(this, SecretActivity.class);
-        AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
-        dlgAlert.setMessage("This is a super secret activity. Proceed with caution.");
-        dlgAlert.setTitle("Are you sure...");
-        dlgAlert.setPositiveButton("OK", null);
-        dlgAlert.setCancelable(true);
-        dlgAlert.create().show();
-
-        dlgAlert.setPositiveButton("Ok",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        startActivity(intent);
-                    }
-                });
+        Intent intent = new Intent(this, SecretActivity.class);
+        startActivity(intent);
     }
 
     public void course1Function(){
@@ -516,7 +499,6 @@ public class MainCourseActivity extends Activity{
         course2Button.setEnabled(true);
         course3Button.setEnabled(true);
         course4Button.setEnabled(true);
-        course5Button.setEnabled(true);
     }
 
 

@@ -95,25 +95,6 @@
                 android:onClick="onCourse4ButtonClicked">
             </Button>
         </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:id="@+id/course5Row"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center">
-            <Button
-                android:id="@+id/course5Button"
-                android:layout_width="125dp"
-                android:layout_height="75dp"
-                android:background="#07000000"
-                android:textSize="22sp"
-                android:text="Course 5"
-                android:textColor="@android:color/holo_blue_bright"
-                android:clickable="true"
-                android:layout_gravity="center"
-                android:onClick="onCourse5ButtonClicked">
-            </Button>
-        </LinearLayout>
     </TableLayout>
 
     <Button

@@ -28,7 +28,7 @@ public class SecretActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secret);
         positionYTextView = (TextView)findViewById(R.id.positionYTextView);
