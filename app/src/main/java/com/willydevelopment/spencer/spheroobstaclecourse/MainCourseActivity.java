@@ -148,12 +148,10 @@ public class MainCourseActivity extends Activity{
         } catch(InterruptedException ex) {
             Thread.currentThread().interrupt();
         }
-        course1Button.setTextColor(Color.parseColor("#ff00ddff"));
         course2Function();
     }
 
     public void course2Function(){
-        course2Button.setTextColor(Color.parseColor("#FFFFFF"));
         ConnectingActivity.mRobot.setLed(1.0f, 1.0f, 0f);
         ConnectingActivity.mRobot.drive(0f, ROBOT_VELOCITY);
         try {
@@ -221,12 +219,10 @@ public class MainCourseActivity extends Activity{
         } catch(InterruptedException ex) {
             Thread.currentThread().interrupt();
         }
-        course2Button.setTextColor(Color.parseColor("#ff00ddff"));
         course3Function();
     }
 
     public void course3Function() {
-        course3Button.setTextColor(Color.parseColor("#FFFFFF"));
         ConnectingActivity.mRobot.setLed(0f, 0f, 1.0f);
         loopCount = 1;
         ConnectingActivity.mRobot.drive(90f, ROBOT_VELOCITY);
@@ -466,12 +462,10 @@ public class MainCourseActivity extends Activity{
         } catch(InterruptedException ex) {
             Thread.currentThread().interrupt();
         }
-        course3Button.setTextColor(Color.parseColor("#ff00ddff"));
         course4Function();
     }
 
     public void course4Function(){
-        course4Button.setTextColor(Color.parseColor("#FFFFFF"));
         ConnectingActivity.mRobot.setLed(0.5f, 0.5f, 0.5f);
         ConnectingActivity.mRobot.drive(0f, ROBOT_VELOCITY);
         ConnectingActivity.mRobot.enableCollisions(true);
@@ -494,7 +488,6 @@ public class MainCourseActivity extends Activity{
                 }
             }
         });
-        course4Button.setTextColor(Color.parseColor("#ff00ddff"));
         course1Button.setEnabled(true);
         course2Button.setEnabled(true);
         course3Button.setEnabled(true);
